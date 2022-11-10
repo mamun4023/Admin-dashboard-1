@@ -12,6 +12,7 @@ import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { Link } from "react-router-dom";
 
 
 const Sidebar = ()=>{
@@ -25,12 +26,12 @@ const Sidebar = ()=>{
                 <ul>
                     <li> 
                         <DashboardIcon className="icon"/>
-                        <span> Dashboard </span>
+                        <Link to="/"><span>   Dashboard  </span></Link>
                     </li>
                     <p className="title" > LISTS</p>
                     <li> 
                         <Person3OutlinedIcon className="icon"/>
-                        <span> Users </span>
+                        <Link to="/users"><span>   Users  </span></Link>
                     </li>
                     <li> 
                         <Products className="icon"/>

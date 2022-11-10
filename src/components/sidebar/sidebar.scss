@@ -43,7 +43,7 @@
             li{
                 display: flex;
                 align-items: center;
-                padding: 5px;
+                padding: 8px;
                 cursor: pointer;
                 &:hover{
                     background-color: #ece8ff
@@ -56,10 +56,16 @@
 
                 span{
                     padding-left: 5px;
-                    font-size: 13px;
+                    font-size: 15px;
                     font-weight: bold;
                     color: #888;
 
+                }
+                a{
+                    text-decoration: none;
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: #888;
                 }
             }
         }
