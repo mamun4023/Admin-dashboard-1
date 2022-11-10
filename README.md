@@ -1,1 +1,1 @@
-## A open Source Admin Dashbord with customizable solution for your admin panel
+## A open Source Admin Dashbord with customizable solution for your on going project
