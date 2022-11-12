@@ -62,40 +62,38 @@ const Data = [
 
 function BasicTable() {
     return (
-        <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-            <TableRow>
-                <TableCell>Tracking ID</TableCell>
-                <TableCell align="right">Product</TableCell>
-                <TableCell align="right">Customer</TableCell>
-                <TableCell align="right">Date</TableCell>
-                <TableCell align="right">Amount</TableCell>
-                <TableCell align="right">Payment Method</TableCell>
-                <TableCell align="right">Status</TableCell>
-            </TableRow>
-            </TableHead>
-            <TableBody>
-            {Data.map((row) => (
-                <TableRow
-                key={row.name}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                <TableCell component="th" scope="row">
-                    {row.trackingId}
-                </TableCell>
-                <TableCell align="right">{row.productName}</TableCell>
-                <TableCell align="right">{row.customer}</TableCell>
-                <TableCell align="right">{row.date}</TableCell>
-                <TableCell align="right">${row.amount}</TableCell>
-                <TableCell align="right">{row.paymentMethod}</TableCell>
-                <TableCell align="right">
-                        <span className= {`status ${row.status}`}>{row.status}</span>
-                </TableCell>
+        <TableContainer component={Paper} className = "table">
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <TableHead>
+                <TableRow>
+                    <TableCell className="tableCell">Tracking ID</TableCell>
+                    <TableCell className="tableCell" align="right">Product</TableCell>
+                    <TableCell className="tableCell" align="right">Customer</TableCell>
+                    <TableCell className="tableCell" align="right">Date</TableCell>
+                    <TableCell className="tableCell" align="right">Amount</TableCell>
+                    <TableCell className="tableCell" align="right">Payment Method</TableCell>
+                    <TableCell className="tableCell" align="right">Status</TableCell>
                 </TableRow>
-            ))}
-            </TableBody>
-        </Table>
+                </TableHead>
+                <TableBody>
+                {Data.map((row) => (
+                    <TableRow
+                        key={row.name}
+                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                    >
+                        <TableCell className="tableCell">{row.trackingId} </TableCell>
+                        <TableCell className="tableCell" align="right">{row.productName}</TableCell>
+                        <TableCell className="tableCell" align="right">{row.customer}</TableCell>
+                        <TableCell className="tableCell" align="right">{row.date}</TableCell>
+                        <TableCell className="tableCell" align="right">${row.amount}</TableCell>
+                        <TableCell className="tableCell" align="right">{row.paymentMethod}</TableCell>
+                        <TableCell className="tableCell" align="right">
+                                <span className= {`status ${row.status}`}>{row.status}</span>
+                        </TableCell>
+                    </TableRow>
+                ))}
+                </TableBody>
+            </Table>
         </TableContainer>
     );
 }

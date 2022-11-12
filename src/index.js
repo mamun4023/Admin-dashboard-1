@@ -1,5 +1,11 @@
 import  ReactDOM  from "react-dom";
 import App from './App';
+import {DarkModeContextProvider} from './ContextAPI/darkModeContext';
 
+ReactDOM.render(
 
-ReactDOM.render(<App/>, document.getElementById('root'))
+    <DarkModeContextProvider>   
+        <App/>
+    </DarkModeContextProvider>
+    , 
+document.getElementById('root'))

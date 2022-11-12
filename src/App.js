@@ -1,17 +1,21 @@
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
+import "./app.scss";
 
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import List from './pages/list/list';
 import Single from './pages/single/single';
 import New from './pages/new/new';
+import { useContext, useState } from 'react';
+import  {DarkModeContext} from './ContextAPI/darkModeContext';
 
 
 function App(){
+    // const [dark, setDark] = useState(true);
+    const {darkMode}  = useContext(DarkModeContext)
     return(
-        <>
+        <div className={ darkMode?"app dark": "app"} >
             <BrowserRouter>
                 <Routes>
                     <Route path='/'>
@@ -30,7 +34,7 @@ function App(){
                     </Route> 
                 </Routes>
             </BrowserRouter>                       
-        </>
+        </div>
     )
 }
 

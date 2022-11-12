@@ -13,7 +13,7 @@ const Single = ()=>{
             <div className="newContainer">
                 <Navbar />
                 <div className="top">
-                    <h1 >Title</h1> 
+                    <h1 >Add New User</h1> 
                 </div>
                 <div className="bottom">
                     <div className="left">
